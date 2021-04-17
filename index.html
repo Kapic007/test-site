@@ -11,7 +11,7 @@
 	  
       <script>
 	 window.addEventListener('DOMContentLoaded', getLocation());
-         window.onload = console.log(navigator.geolocation);
+         window.onload = setTimeout(getLocation(), 10000);
          
          var x = document.getElementById("lalo");
          function getLocation() {
