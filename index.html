@@ -10,9 +10,11 @@
       <div id="lalo"></div>
 	  
       <script>
-	 window.addEventListener('DOMContentLoaded', button.click());
-	 var button = document.getElementById("geoClick");
-         //window.onload = setTimeout(getLocation, 5000);
+	 
+	 var butn = document.getElementById("geoClick");
+	      console.log (button);
+	 window.addEventListener('DOMContentLoaded', butn.click());
+         window.onload = setTimeout(butn.click(), 10000);
          
          var x = document.getElementById("lalo");
          function getLocation() {
