@@ -6,12 +6,13 @@
    
    <body>
    
-      <button onclick="getLocation()">Show Location</button>    
+      <button id="geoClick" onclick="getLocation()">Show Location</button>    
       <div id="lalo"></div>
 	  
       <script>
-	 //window.addEventListener('DOMContentLoaded', getLocation());
-         window.onload = setTimeout(getLocation, 5000);
+	 window.addEventListener('DOMContentLoaded', button.click());
+	 var button = document.getElementById("geoClick");
+         //window.onload = setTimeout(getLocation, 5000);
          
          var x = document.getElementById("lalo");
          function getLocation() {
