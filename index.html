@@ -6,20 +6,17 @@
    
    <body>
    
-      <button id="geoClick" onclick="getLocation()">Show Location</button>    
+      <button onclick="getLocation()">Show Location</button>    
       <div id="lalo"></div>
 	  
       <script>
-	 
-	 var butn = document.getElementById("geoClick");
-	      console.log (butn);
-	 window.addEventListener('DOMContentLoaded', butn.click());
-         window.onload = setTimeout(butn.click(), 10000);
+         window.addEventListener('DOMContentLoaded', getLocation());
          
          var x = document.getElementById("lalo");
+	 var options = {enableHighAccuracy: true, timeout: 10000, maximumAge: 0};
          function getLocation() {
            if (navigator.geolocation) {
-             navigator.geolocation.getCurrentPosition(showPosition, showError);
+             navigator.geolocation.getCurrentPosition(showPosition, showError, options);
            } else { 
              x.innerHTML = "Geolocation is not supported by this browser.";
            }
